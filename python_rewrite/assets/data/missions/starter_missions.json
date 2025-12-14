@@ -1,0 +1,59 @@
+[
+  {
+    "id": "MISSION_GET_ANTIBIOTICS",
+    "type": "FIND_ITEM",
+    "title": "Find Antibiotics",
+    "description": "Someone is sick and needs antibiotics. Find some antibiotics and bring them back.",
+    "target_count": 1,
+    "target_item_id": "antibiotics",
+    "reward_money": 100,
+    "reward_items": ["water", "apple"],
+    "fail_on_npc_death": true
+  },
+  {
+    "id": "MISSION_KILL_ZOMBIE_MOM",
+    "type": "KILL_MONSTER",
+    "title": "Kill Zombie Mom",
+    "description": "A survivor's mother has turned into a zombie. Put her out of her misery.",
+    "target_count": 1,
+    "target_monster_type": "zombie",
+    "reward_money": 50,
+    "fail_on_npc_death": false
+  },
+  {
+    "id": "MISSION_REACH_SAFETY",
+    "type": "REACH",
+    "title": "Reach the Refugee Center",
+    "description": "Travel to the refugee center and report in.",
+    "target_count": 1,
+    "reward_money": 25
+  },
+  {
+    "id": "MISSION_GET_BLACK_BOX",
+    "type": "FIND_ITEM",
+    "title": "Retrieve Black Box Flight Recorder",
+    "description": "A helicopter crashed nearby. Find and retrieve the black box flight recorder.",
+    "target_count": 1,
+    "target_item_id": "black_box",
+    "reward_money": 200,
+    "reward_items": ["rock", "stick"]
+  },
+  {
+    "id": "MISSION_KILL_JABBERWOCK",
+    "type": "KILL_MONSTER",
+    "title": "Kill the Jabberwock",
+    "description": "A dangerous creature called a Jabberwock has been terrorizing the area. Hunt it down.",
+    "target_count": 1,
+    "target_monster_type": "jabberwock",
+    "reward_money": 500,
+    "reward_items": ["tshirt", "jeans"]
+  },
+  {
+    "id": "MISSION_RECRUIT_AID",
+    "type": "REACH",
+    "title": "Recruit's Aid",
+    "description": "Help a new recruit by bringing them basic supplies.",
+    "target_count": 3,
+    "reward_money": 75
+  }
+]
