@@ -154,11 +154,11 @@
 ### ⏳ 第五阶段：高级功能（进行中 🚧）
 
 **时间**: Week 9-12  
-**状态**: 20% 完成  
-**当前重点**: 保存/加载系统已完成 ✅
+**状态**: 40% 完成  
+**当前重点**: 保存/加载系统已完成 ✅ | 大地图系统已完成 ✅
 
 #### 系统管理 (src/systems/)
-- [x] **save_load.py** - 保存/加载系统 ✅ ✨ NEW
+- [x] **save_load.py** - 保存/加载系统 ✅ ✨
   - 游戏状态序列化/反序列化
   - 玩家数据（属性、技能、特征、库存）
   - 地图数据（地形、家具、物品）  
@@ -169,7 +169,21 @@
   - 存档删除功能
   - **测试**: 9/9 通过 ✅
 
+#### 游戏世界 (src/world/)
+- [x] **overmap.py** - 大地图系统 ✅ ✨ NEW
+  - 大地图坐标系统 (OMT 坐标)
+  - 大地图格子 (180x180, 3个Z层)
+  - 26种大地图地形类型
+  - 特殊位置标记和管理
+  - 地图笔记系统
+  - 探索状态追踪
+  - 坐标转换工具 (tile ↔ omt ↔ submap)
+  - 简单地图生成 (城市、道路、森林、河流)
+  - 序列化和反序列化
+  - **测试**: 23/23 通过 ✅
+
 #### 待开发计划
+- [ ] world/overmap_buffer.py - 大地图缓冲区
 - [ ] ai/npc_ai.py - NPC AI系统
 - [ ] ai/monster_ai.py - 怪物AI系统
 - [ ] systems/mission.py - 任务系统
@@ -183,7 +197,7 @@
 - **源代码文件**: 44 个 (+1: save_load.py) ✨
 - **测试文件**: 17 个 (+1: test_save_load.py) ✨
 - **总代码行数**: ~10,500+ 行
-- **测试通过率**: 105/107 (98.1%)
+- **测试通过率**: 128/130 (98.5%)
 
 ### 游戏内容
 - **地形类型**: 10 种
@@ -196,10 +210,12 @@
   - stick, rock, bottle_plastic, water, apple, jeans, tshirt
 - **怪物类型**: 3 种
   - mon_zombie, mon_rat_giant, mon_dog_wild
-- **技能类型**: 14 种 (NEW)
+- **技能类型**: 14 种
   - melee, dodge, ranged, survival, crafting, cooking, mechanics, electronics, etc.
-- **配方数量**: 2 个 (NEW)
+- **配方数量**: 2 个
   - recipe_wooden_spear, recipe_stone_knife
+- **大地图地形**: 26 种 ✨ NEW
+  - field, forest, road, house, hospital, supermarket, river, lake, etc.
 
 ### 系统功能
 - ✅ 配置管理（支持多种设置）
@@ -222,13 +238,14 @@ python_rewrite/
 │   ├── data/           ✅ 3 modules
 │   ├── ui/             ✅ 4 modules
 │   ├── engine/         ✅ 4 modules
-│   ├── world/          ✅ 7 modules
+│   ├── world/          ✅ 8 modules (+1: overmap.py) ✨
 │   ├── entities/       ✅ 8 modules
-│   ├── systems/        ✅ 6 modules (+1: save_load.py) ✨
+│   ├── systems/        ✅ 6 modules
 │   └── ai/             ⏳ 0 modules
-├── tests/              ✅ 17 test files (+1) ✨
+├── tests/              ✅ 18 test files (+1: test_overmap.py) ✨
 ├── docs/
-│   └── 开发方案.md      ✅ Complete
+│   ├── 开发方案.md      ✅ Complete
+│   └── plan.md         ✅ Updated ✨
 ├── main.py             ✅ Working
 ├── requirements.txt    ✅ Complete
 └── pyproject.toml      ✅ Complete
