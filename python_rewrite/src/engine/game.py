@@ -38,6 +38,11 @@ class Game:
 
         self.event_system = EventSystem()
 
+        # 保存/加载系统
+        from ..systems.save_load import SaveLoadSystem
+
+        self.save_load_system = SaveLoadSystem()
+
         logger.info("游戏实例已创建")
 
     def initialize(self, data_path: str = "../data"):
@@ -82,41 +87,41 @@ class Game:
         加载游戏
 
         Args:
-            save_file: 存档文件路径
+            save_file: 存档文件路径（世界名称）
 
         Returns:
             是否成功加载
         """
         logger.info(f"加载游戏: {save_file}")
 
-        # TODO: 实现加载逻辑
-        # - 读取存档文件
-        # - 恢复游戏状态
-        # - 恢复世界数据
-        # - 恢复玩家数据
-
-        self.running = True
-        return True
+        # 使用保存/加载系统加载游戏
+        if self.save_load_system.load_game(self, save_file):
+            self.running = True
+            logger.info("游戏加载成功")
+            return True
+        else:
+            logger.error("游戏加载失败")
+            return False
 
     def save_game(self, save_file: str) -> bool:
         """
         保存游戏
 
         Args:
-            save_file: 存档文件路径
+            save_file: 存档文件路径（世界名称）
 
         Returns:
             是否成功保存
         """
         logger.info(f"保存游戏: {save_file}")
 
-        # TODO: 实现保存逻辑
-        # - 序列化游戏状态
-        # - 序列化世界数据
-        # - 序列化玩家数据
-        # - 写入文件
-
-        return True
+        # 使用保存/加载系统保存游戏
+        if self.save_load_system.save_game(self, save_file):
+            logger.info("游戏保存成功")
+            return True
+        else:
+            logger.error("游戏保存失败")
+            return False
 
     def update(self, delta_time: float):
         """
