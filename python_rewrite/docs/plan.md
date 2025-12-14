@@ -55,15 +55,15 @@
 ## 二、尚未实现的核心系统 ❌
 
 ### 2.1 世界生成和管理
-| 系统 | 原游戏文件 | 优先级 | 复杂度 |
-|------|-----------|--------|--------|
-| **大地图系统 (Overmap)** | overmap.cpp/h | 🔴 高 | ⭐⭐⭐⭐⭐ |
-| 大地图缓冲区 | overmapbuffer.cpp/h | 🔴 高 | ⭐⭐⭐⭐ |
-| 大地图噪声生成 | overmap_noise.cpp/h | 🟡 中 | ⭐⭐⭐⭐ |
-| 城市生成 | overmap_city.cpp/h | 🟡 中 | ⭐⭐⭐ |
-| 场地位置 | overmap_location.cpp/h | 🟡 中 | ⭐⭐⭐ |
-| 地图额外信息 | map_extras.cpp/h | 🟢 低 | ⭐⭐ |
-| 世界工厂 | worldfactory.cpp/h | 🔴 高 | ⭐⭐⭐⭐ |
+| 系统 | 原游戏文件 | 优先级 | 复杂度 | 状态 |
+|------|-----------|--------|--------|------|
+| **大地图系统 (Overmap)** | overmap.cpp/h | 🔴 高 | ⭐⭐⭐⭐⭐ | ✅ 已完成 |
+| **大地图缓冲区** | overmapbuffer.cpp/h | 🔴 高 | ⭐⭐⭐⭐ | ✅ 已完成 |
+| **世界工厂** | worldfactory.cpp/h | 🔴 高 | ⭐⭐⭐⭐ | ✅ 已完成 |
+| 大地图噪声生成 | overmap_noise.cpp/h | 🟡 中 | ⭐⭐⭐⭐ | ❌ 待完成 |
+| 城市生成 | overmap_city.cpp/h | 🟡 中 | ⭐⭐⭐ | ❌ 待完成 |
+| 场地位置 | overmap_location.cpp/h | 🟡 中 | ⭐⭐⭐ | ❌ 待完成 |
+| 地图额外信息 | map_extras.cpp/h | 🟢 低 | ⭐⭐ | ❌ 待完成 |
 
 ### 2.2 车辆系统
 | 系统 | 原游戏文件 | 优先级 | 复杂度 |
