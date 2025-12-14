@@ -1,0 +1,14 @@
+# CDDA Python 重写项目依赖
+
+# 核心依赖
+PySide6>=6.5.0
+
+# 开发工具
+pytest>=7.4.0
+black>=23.7.0
+mypy>=1.5.0
+flake8>=6.1.0
+
+# 可选依赖
+pytest-cov>=4.1.0
+pytest-qt>=4.2.0
