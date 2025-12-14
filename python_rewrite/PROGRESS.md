@@ -2,8 +2,8 @@
 
 ## 项目状态
 
-**当前阶段**: 第三阶段完成 ✅  
-**总体进度**: 60% (3/5 阶段)  
+**当前阶段**: 第四阶段完成 ✅  
+**总体进度**: 80% (4/5 阶段)  
 **最后更新**: 2025-12-14
 
 ## 已完成阶段
@@ -101,20 +101,50 @@
 
 ---
 
-## 进行中/待开发
-
-### 🚧 第四阶段：游戏机制
+### ✅ 第四阶段：游戏机制
 
 **时间**: Week 7-8  
+**状态**: 100% 完成
+
+#### 游戏机制系统 (src/systems/)
+- [x] movement.py - 移动系统（移动检查、成本计算、路径规划）
+- [x] action.py - 动作系统（7种动作类型：移动、拾取、丢弃、装备、等待、攻击）
+- [x] combat.py - 战斗系统（近战/远程、命中率、伤害、护甲、暴击）
+- [x] skill.py - 技能系统（14种技能、技能检定、经验系统）
+- [x] crafting.py - 制作系统（配方管理、2个配方、材料检查、物品制作）
+
+#### 测试
+- [x] test_movement.py
+- [x] test_action.py
+- [x] test_combat.py
+- [x] test_skills_crafting.py
+
+#### 功能验证
+- [x] 角色移动和路径计算
+- [x] 动作系统框架
+- [x] 战斗机制（攻击、命中、伤害）
+- [x] 技能检定和加成
+- [x] 物品制作流程
+- [x] 所有模块导入测试通过
+
+---
+
+## 进行中/待开发
+
+### 🚧 第五阶段：高级功能和优化
+
+**时间**: Week 9-10  
 **状态**: 0% 完成
 
 #### 计划任务
-- [ ] systems/movement.py - 移动系统
-- [ ] systems/action.py - 动作系统
-- [ ] systems/combat.py - 战斗系统
-- [ ] systems/skill.py - 技能系统
-- [ ] systems/crafting.py - 制作系统
-- [ ] entities/vehicle.py - 车辆系统（延后至第四阶段）
+- [ ] ai/npc_ai.py - NPC AI系统
+- [ ] ai/monster_ai.py - 怪物AI系统
+- [ ] systems/quest.py - 任务系统
+- [ ] systems/faction.py - 派系系统
+- [ ] entities/bionic.py - 生化插件系统
+- [ ] entities/mutation.py - 突变系统
+- [ ] systems/save_load.py - 保存/加载系统
+- [ ] ui/完善和优化
 
 ---
 
@@ -136,9 +166,9 @@
 ## 统计数据
 
 ### 代码统计
-- **源代码文件**: 38 个 (+8)
-- **测试文件**: 12 个 (+3)
-- **总代码行数**: ~6,500+ 行
+- **源代码文件**: 43 个 (+5)
+- **测试文件**: 16 个 (+4)
+- **总代码行数**: ~9,000+ 行
 
 ### 游戏内容
 - **地形类型**: 10 种
@@ -147,10 +177,14 @@
   - f_chair, f_table, f_bed, f_bookcase, f_locker, f_rack, f_counter, f_fridge 等
 - **场地类型**: 6 种
   - fd_fire, fd_smoke, fd_toxic_gas, fd_blood, fd_acid, fd_puddle
-- **物品类型**: 7 种 (NEW)
+- **物品类型**: 7 种
   - stick, rock, bottle_plastic, water, apple, jeans, tshirt
-- **怪物类型**: 3 种 (NEW)
+- **怪物类型**: 3 种
   - mon_zombie, mon_rat_giant, mon_dog_wild
+- **技能类型**: 14 种 (NEW)
+  - melee, dodge, ranged, survival, crafting, cooking, mechanics, electronics, etc.
+- **配方数量**: 2 个 (NEW)
+  - recipe_wooden_spear, recipe_stone_knife
 
 ### 系统功能
 - ✅ 配置管理（支持多种设置）
@@ -175,9 +209,9 @@ python_rewrite/
 │   ├── engine/         ✅ 4 modules
 │   ├── world/          ✅ 7 modules
 │   ├── entities/       ✅ 8 modules
-│   ├── systems/        ⏳ 0 modules
+│   ├── systems/        ✅ 5 modules
 │   └── ai/             ⏳ 0 modules
-├── tests/              ✅ 12 test files
+├── tests/              ✅ 16 test files
 ├── docs/
 │   └── 开发方案.md      ✅ Complete
 ├── main.py             ✅ Working
@@ -209,22 +243,25 @@ python -m pytest tests/ -v
 
 ## 下一步计划
 
-1. **第四阶段：游戏机制**
-   - 实现移动系统
-   - 创建动作系统
-   - 实现战斗系统
-   - 添加技能和制作系统
+1. **第五阶段：高级功能**
+   - 实现NPC AI系统
+   - 创建怪物AI系统
+   - 实现任务系统
+   - 添加派系系统
+   - 实现生化插件和突变系统
+   - 创建保存/加载系统
 
-2. **集成测试**
-   - 将实体系统与地图系统集成
-   - 测试玩家在地图上的移动
-   - 验证物品放置和拾取
-   - 测试怪物AI基础
+2. **UI完善**
+   - 完善主菜单
+   - 创建角色创建界面
+   - 改进游戏内HUD
+   - 添加库存和制作界面
 
-3. **性能优化**
-   - 优化子地图加载
-   - 实现视野计算
-   - 添加光照系统
+3. **集成和优化**
+   - 全面集成测试
+   - 性能优化
+   - Bug修复
+   - 文档完善
 
 ---
 
