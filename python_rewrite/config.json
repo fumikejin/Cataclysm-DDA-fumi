@@ -1,0 +1,39 @@
+{
+    "game": {
+        "language": "zh_CN",
+        "sound_enabled": true,
+        "music_enabled": true,
+        "autosave": true,
+        "autosave_interval": 5
+    },
+    "graphics": {
+        "tileset": "ASCII",
+        "tile_size": 16,
+        "font_size": 14,
+        "fullscreen": false,
+        "window_width": 1024,
+        "window_height": 768,
+        "fps_limit": 60
+    },
+    "controls": {
+        "move_north": "k",
+        "move_south": "j",
+        "move_east": "l",
+        "move_west": "h",
+        "move_northeast": "u",
+        "move_northwest": "y",
+        "move_southeast": "n",
+        "move_southwest": "b",
+        "inventory": "i",
+        "pickup": ",",
+        "drop": "d",
+        "examine": "e",
+        "crafting": "&",
+        "wait": "."
+    },
+    "debug": {
+        "enabled": false,
+        "show_fps": false,
+        "log_level": "INFO"
+    }
+}
