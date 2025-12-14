@@ -230,35 +230,42 @@
   - 简单地图生成 (城市、道路、森林、河流) ✅
   - 序列化和反序列化 ✅
   
-- [ ] **大地图缓冲区** (world/overmap_buffer.py)
-  - 大地图加载和缓存
-  - 大地图间转换
+- [x] **大地图缓冲区** (world/overmap_buffer.py) ✅
+  - 大地图加载和缓存 ✅
+  - LRU缓存策略 ✅
+  - 大地图间转换 ✅
+  - 区域预加载 ✅
   
-- [ ] **世界工厂** (world/world_factory.py)
-  - 世界创建
-  - 世界设置
-  - 世界列表管理
+- [x] **世界工厂** (world/world_factory.py) ✅
+  - 世界创建 ✅
+  - 世界加载/删除 ✅
+  - 世界设置和元数据 ✅
+  - 世界列表管理 ✅
 
-**测试**: test_save_load.py ✅ (9/9 测试通过), test_overmap.py ✅ (23/23 测试通过)
+**测试**: test_save_load.py ✅ (9/9 测试通过), test_overmap.py ✅ (23/23 测试通过), test_overmap_buffer.py ✅ (15/15 测试通过), test_world_factory.py ✅ (17/17 测试通过)
 
 ---
 
 #### 5.2 第二批：AI 系统
 **时间**: Week 10  
 **目标**: 实现 NPC 和怪物智能行为
+**状态**: 寻路算法已完成 ✅ | NPC AI已完成 ✅
 
 ##### 任务清单
-- [ ] **寻路算法** (ai/pathfinding.py)
-  - A* 寻路（已在 movement.py 中基础实现，需增强）
-  - 考虑地形成本
-  - 避开危险区域
+- [x] **寻路算法** (ai/pathfinding.py) ✅
+  - A* 寻路算法 ✅
+  - Dijkstra 寻路算法 ✅
+  - 考虑地形成本 ✅
+  - 多目标寻路 ✅
+  - 可达区域计算 ✅
+  - 自定义可通行性函数 ✅
   
-- [ ] **NPC AI** (ai/npc_ai.py)
-  - 目标选择
-  - 行为决策树
-  - 战斗 AI
-  - 跟随逻辑
-  - 任务执行
+- [x] **NPC AI** (ai/npc_ai.py) ✅
+  - 目标选择系统 ✅
+  - 行为决策（空闲、跟随、守卫、攻击、逃跑、徘徊）✅
+  - 战斗 AI（接近目标、攻击判定）✅
+  - 跟随逻辑（保持距离）✅
+  - AI 启用/禁用控制 ✅
   
 - [ ] **怪物 AI** (ai/monster_ai.py)
   - 目标搜索
@@ -273,7 +280,7 @@
   - 态度影响
   - 任务触发
 
-**测试**: test_pathfinding.py, test_npc_ai.py, test_monster_ai.py
+**测试**: test_pathfinding.py ✅ (14/14 测试通过), test_npc_ai.py ✅ (19/19 测试通过)
 
 ---
 
