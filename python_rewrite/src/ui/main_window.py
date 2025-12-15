@@ -11,10 +11,9 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
     QHBoxLayout,
     QLabel,
-    QAction,
     QMessageBox,
 )
-from PySide6.QtGui import QKeyEvent
+from PySide6.QtGui import QKeyEvent, QAction
 
 from ..utils.logger import logger
 from ..utils.config import config
