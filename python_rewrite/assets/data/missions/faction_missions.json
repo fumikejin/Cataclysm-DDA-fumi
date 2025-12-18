@@ -1,0 +1,30 @@
+[
+  {
+    "id": "MISSION_FACTION_HUNT_RAIDERS",
+    "type": "KILL",
+    "title": "Hunt Raiders",
+    "description": "Eliminate hostile raiders threatening the faction's territory.",
+    "target_count": 5,
+    "reward_money": 300,
+    "reward_items": ["bottle"]
+  },
+  {
+    "id": "MISSION_FACTION_SCAVENGE_FOOD",
+    "type": "BRING_ITEM",
+    "title": "Scavenge Food",
+    "description": "The faction needs food supplies. Bring back preserved food items.",
+    "target_count": 10,
+    "target_item_id": "apple",
+    "reward_money": 150
+  },
+  {
+    "id": "MISSION_FACTION_CLEAR_ZOMBIES",
+    "type": "KILL_MONSTER",
+    "title": "Clear Zombie Horde",
+    "description": "Clear out a zombie horde from a strategic location.",
+    "target_count": 20,
+    "target_monster_type": "zombie",
+    "reward_money": 400,
+    "reward_items": ["stick", "rock"]
+  }
+]

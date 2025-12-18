@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cdda-python"
+version = "0.1.0"
+description = "CDDA Python 重写版本 - 使用 PySide6 (仅用于学习研究)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "CC-BY-SA 3.0"}
+authors = [
+    {name = "CDDA Python 学习项目"}
+]
+dependencies = [
+    "PySide6>=6.5.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "black>=23.7.0",
+    "mypy>=1.5.0",
+    "flake8>=6.1.0",
+    "pytest-cov>=4.1.0",
+    "pytest-qt>=4.2.0",
+]
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
